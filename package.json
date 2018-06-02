@@ -10,7 +10,8 @@
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.1",
     "vue": "^2.5.16",
-    "vue-router": "^2.7.0"
+    "vue-router": "^2.7.0",
+    "vuex": "^2.4.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",

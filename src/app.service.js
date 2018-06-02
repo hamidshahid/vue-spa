@@ -10,6 +10,18 @@ const appService = {
           resolve(response.data)
         })
     })
+  },
+  login (credentials) {
+    return new Promise((resolve, reject) => {
+      if (credentials.username === 'hamid' && credentials.password === 'vuejs') {
+        var random = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)
+        var tomorrow = new Date()
+        tomorrow.setDate(tomorrow.getDate() + 1)
+        return resolve({token: random, expiration: tomorrow})
+      } else {
+        return reject(new Error('User not found'))
+      }
+    })
   }
 }
 
